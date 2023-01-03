@@ -1,0 +1,18 @@
+[package]
+name = "pxf-devbin"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+clap = { version = "4.0.15", features = ["derive"] }
+log = "0.4.17"
+env_logger = "0.9.1"
+
+[dependencies.wry]
+version = "0.21.1"
+features = ["transparent"]
+
+[dependencies.pyo3]
+version = "0.17.2"
+features = ["auto-initialize"]
