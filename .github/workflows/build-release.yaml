@@ -38,7 +38,7 @@ jobs:
           python3.10
       
       - name: Set Pyo3 environment var
-        run: env PYO3_PYTHON=python3.10
+        run: export PYO3_PYTHON=python3.10
 
       - name: Compile and release
         uses: rust-build/rust-build.action@v1.4.0
