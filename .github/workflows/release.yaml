@@ -31,6 +31,22 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Install Dependencies
+        run: |
+          sudo apt update
+          sudo apt install libwebkit2gtk-4.0-dev \
+          build-essential \
+          curl \
+          wget \
+          libssl-dev \
+          libgtk-3-dev \
+          libayatana-appindicator3-dev \
+          librsvg2-dev \
+          python3.10
+      
+      - name: Set Pyo3 environment var
+        run: export PYO3_PYTHON=/usr/bin/python3.10
+
       - uses: actions-rs/toolchain@v1
         with:
           profile: minimal
