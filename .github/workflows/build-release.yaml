@@ -35,11 +35,10 @@ jobs:
           libgtk-3-dev \
           libayatana-appindicator3-dev \
           librsvg2-dev \
-          python3.10 \
-          python3.10-devel
+          python3.10
       
       - name: Set Pyo3 environment var
-        run: export PYO3_PYTHON=python3.10
+        run: export PYO3_PYTHON=/usr/bin/python3.10
 
       - name: Compile and release
         uses: rust-build/rust-build.action@v1.4.0
